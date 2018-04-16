@@ -1,0 +1,22 @@
+.Table {
+    font-family: "Open Sans", sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.Td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+.Th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+.Tr:nth-child(even) {
+    background-color: #dddddd;
+}
