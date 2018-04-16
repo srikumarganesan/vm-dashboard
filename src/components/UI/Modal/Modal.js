@@ -3,6 +3,8 @@
  * has a prop show.
  * @param {show} prop to show or hide the component shown as a modal
  * @param {modalClosed} function to be executed when the user clicks on the backdrop
+ *
+ * @author [Srikumar Ganesan](https://github.com/srikumarganesan)
  */
 import React, { Component } from 'react';
 import classes from './Modal.css';
