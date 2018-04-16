@@ -6,8 +6,8 @@ import CreateVendingMachine from '../../containers/CreateVendingMachine/CreateVe
 import Navigation from '../../components/Navigation/Navigation';
 import Modal from '../../components/UI/Modal/Modal';
 import axios from '../../axios-vmmgmt';
-import VendingMachines from '../../components/VendingMachines/VendingMachines';
 import Spinner from '../../components/UI/Spinner/Spinner';
+import Table from '../../components/UI/Table/Table';
 
 class MachineDashboard extends Component {
     state = {
@@ -97,7 +97,7 @@ class MachineDashboard extends Component {
         let vendingMachines = null;
         if (this.state.vendingMachines.length !== 0) {
             vendingMachines =
-                <VendingMachines vendingMachines={this.state.vendingMachines} clicked={this.onDeleteVmHandler}/>
+                <Table data={this.state.vendingMachines} click={this.onDeleteVmHandler}/>
         } else {
             vendingMachines = <p>No Vending Machines exist, Please create one using the dashboard</p>
         }
