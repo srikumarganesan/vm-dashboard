@@ -9,7 +9,8 @@
  * @author [Srikumar Ganesan](https://github.com/srikumarganesan)
  */
 import React from 'react';
-import classes from './Table.css'
+import classes from './Table.css';
+import PropTypes from 'prop-types';
 
 const table = (props) => {
     let tableRows = props.data.map(datum => {
@@ -37,6 +38,11 @@ const table = (props) => {
             </table>
         </div>
     )
+};
+
+table.propTypes = {
+    data: PropTypes.array,
+    click: PropTypes.func
 };
 
 export default table;
