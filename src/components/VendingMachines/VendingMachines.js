@@ -7,10 +7,10 @@
  * @author [Srikumar Ganesan](https://github.com/srikumarganesan)
  */
 import React from 'react';
-import VendingMachine from './VendingMachine/VendingMachine'
+import VendingMachine from './VendingMachine/VendingMachine';
+import PropTypes from 'prop-types';
 
 const vendingMachines = (props) => {
-    console.log(props.vendingMachines);
     return props.vendingMachines.map(vm => {
         return <VendingMachine
             longitude={vm.attributes.longitude}
@@ -19,6 +19,11 @@ const vendingMachines = (props) => {
             key={vm.id}
             click={() => props.clicked(vm.id)}/>
     })
+};
+
+vendingMachines.propTypes = {
+    vendingMachines: PropTypes.array,
+    clicked: PropTypes.func
 };
 
 export default vendingMachines;
