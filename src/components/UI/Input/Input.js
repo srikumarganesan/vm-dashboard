@@ -7,6 +7,7 @@
  */
 import React from 'react';
 import classes from './Input.css';
+import PropTypes from 'prop-types';
 
 const input = ( props ) => {
     let validationMsg = null;
@@ -33,6 +34,18 @@ const input = ( props ) => {
         </div>
     );
 
+};
+
+input.propTypes = {
+    elementConfig: PropTypes.object,
+    value: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.number
+    ]),
+    invalid: PropTypes.bool,
+    shouldValidate: PropTypes.object,
+    touched: PropTypes.bool,
+    changed: PropTypes.func
 };
 
 export default input;
