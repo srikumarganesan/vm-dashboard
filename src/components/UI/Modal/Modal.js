@@ -10,6 +10,7 @@ import React, { Component } from 'react';
 import classes from './Modal.css';
 import Backdrop from '../Backdrop/Backdrop';
 import Aux from '../../../hoc/Auxilary/Auxilary';
+import PropTypes from 'prop-types';
 
 class Modal extends Component {
 
@@ -37,5 +38,10 @@ class Modal extends Component {
         )
     }
 }
+
+Modal.propTypes = {
+    show: PropTypes.bool,
+    modalClosed: PropTypes.func
+};
 
 export default Modal;
