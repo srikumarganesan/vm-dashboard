@@ -6,6 +6,7 @@
  */
 import React from 'react'
 import classes from './Navigation.css';
+import PropTypes from 'prop-types';
 
 const navigation = (props) => {
     return (
@@ -22,6 +23,10 @@ const navigation = (props) => {
             </nav>
         </header>
     );
+};
+
+navigation.propTypes = {
+    clicked: PropTypes.func
 };
 
 export default navigation;
