@@ -9,6 +9,7 @@ import React, {Component} from 'react';
 import Button from '../../components/UI/Button/Button';
 import classes from './CreateVendingMachine.css';
 import Input from '../../components/UI/Input/Input';
+import PropTypes from 'prop-types';
 
 const baseForm = {
     longitude: {
@@ -156,5 +157,9 @@ class CreateVendingMachine extends Component {
         );
     }
 }
+
+CreateVendingMachine.propType = {
+    onCreateVM: PropTypes.func
+};
 
 export default CreateVendingMachine;
