@@ -11,6 +11,7 @@
 import React from 'react';
 import classes from './VendingMachine.css';
 import Input from '../../UI/Input/Input';
+import PropTypes from 'prop-types';
 
 const vendingMachine = (props) => {
 
@@ -22,6 +23,16 @@ const vendingMachine = (props) => {
             <button onClick={props.click}>Delete</button>
         </div>
     )
+};
+
+vendingMachine.propTypes = {
+    id: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.number
+    ]),
+    longitude: PropTypes.number,
+    latitude: PropTypes.number,
+    click: PropTypes.func
 };
 
 export default vendingMachine;
